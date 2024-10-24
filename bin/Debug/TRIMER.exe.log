@@ -1,0 +1,1274 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdre0, Thread: 0x2EC4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:14:
+
+     12: 
+     13: 
+=>   14:     txTextCursor (false);
+     15:     return 0;
+     16:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2024 08:18:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2024 08:18:24
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdre0, Thread: 0x16B0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:14:
+
+     12: 
+     13: 
+=>   14:     txTextCursor (false);
+     15:     return 0;
+     16:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2024 08:21:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2024 08:21:44
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdre0, Thread: 0xDB0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:14:
+
+     12: 
+     13: 
+=>   14:     txTextCursor (false);
+     15:     return 0;
+     16:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2024 08:24:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2024 08:24:40
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13222, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x1514 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13222:
+
+  13220: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13221:     {
+=>13222: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13223: 
+  13224: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:6:
+
+      4: void drawSky(int R, int G, int B)
+      5: {
+=>    6:     txSetColor (RGB(R, G, B));
+      7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct  1 2024 08:59:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 01 2024 08:59:37
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13222, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Если вы указали параметр "dc", то он неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x1D2C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13222:
+
+  13220: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13221:     {
+=>13222: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13223: 
+  13224: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:6:
+
+      4: void drawSky(int R, int G, int B)
+      5: {
+=>    6:     txSetColor (RGB(R, G, B));
+      7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct  1 2024 09:01:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 01 2024 09:02:01
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13222, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x1470 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13222:
+
+  13220: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13221:     {
+=>13222: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13223: 
+  13224: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:6:
+
+      4: void drawSky(int R, int G, int B)
+      5: {
+=>    6:     txSetColor (RGB(R, G, B));
+      7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct  1 2024 09:02:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 01 2024 09:03:00
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13222, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0xDC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13222:
+
+  13220: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13221:     {
+=>13222: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13223: 
+  13224: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:6:
+
+      4: void drawSky(int R, int G, int B)
+      5: {
+=>    6:     txSetColor (RGB(R, G, B));
+      7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct  1 2024 09:03:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 01 2024 09:03:49
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13222, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x6E0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13222:
+
+  13220: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13221:     {
+=>13222: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13223: 
+  13224: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:6:
+
+      4: void drawSky(int R, int G, int B)
+      5: {
+=>    6:     txSetColor (RGB(R, G, B));
+      7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct  1 2024 09:04:16, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 01 2024 09:04:33
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13222, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x129C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13222:
+
+  13220: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13221:     {
+=>13222: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13223: 
+  13224: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:6:
+
+      4: void drawSky(int R, int G, int B)
+      5: {
+=>    6:     txSetColor (RGB(R, G, B));
+      7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct  1 2024 09:06:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 01 2024 09:07:07
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13274, функция: HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0xB0C (Main), GetLastError(): 87 (Параметр задан неверно). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13274:
+
+  13272: HBRUSH txSetFillColor (COLORREF color, HDC dc /*= txDC()*/)
+  13273:     {
+=>13274: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13275: 
+  13276: $   HBRUSH brush = (color == TX_TRANSPARENT)? (HBRUSH) Win32::GetStockObject (HOLLOW_BRUSH) : Win32::CreateSolidBrush (color);
+
+# 1 in void drawSun(int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:40:
+
+     38: {
+     39:     txSetColor (TX_YELLOW);
+=>   40:     txSetFillColor(TX_YELLOW);
+     41:     txCircle(x,y,50);
+     42: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 15 2024 08:19:58, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 15 2024 08:20:16
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\048C~1\23DB~1\TRIMER\bin\Debug\TRIMER.exe,
+
+ВНЕЗАПНО: Неверный или уже закрытый дескриптор.
+
+#1: Исключение EXCEPTION_INVALID_HANDLE (0xC0000008) при выполнении кода по адресу 0xB94314BA. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x598 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void {anonymous}::TX::_txOnExitProcess(unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h:8958:
+
+   8956:         }
+   8957: 
+=> 8958: $5  _txCleanup();
+   8959: 
+   8960:     if (retcode != 0)
+
+# 1 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:113:
+
+    111: 
+    112: 
+=>  113:     txTextCursor (false);
+    114:     return 0;
+    115:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 15 2024 08:23:54, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 15 2024 08:24:14
+
+Run file:	C:\048C~1\23DB~1\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\048C~1\23DB~1\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\048C~1\23DB~1\TRIMER\bin\Debug\TRIMER.exe,
+
+ВНЕЗАПНО: Неверный или уже закрытый дескриптор.
+
+#1: Исключение EXCEPTION_INVALID_HANDLE (0xC0000008) при выполнении кода по адресу 0xB94314BA. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x598 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void {anonymous}::TX::_txOnExitProcess(unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h:8958:
+
+   8956:         }
+   8957: 
+=> 8958: $5  _txCleanup();
+   8959: 
+   8960:     if (retcode != 0)
+
+# 1 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:113:
+
+    111: 
+    112: 
+=>  113:     txTextCursor (false);
+    114:     return 0;
+    115:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 15 2024 08:23:54, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 15 2024 08:24:14
+
+Run file:	C:\048C~1\23DB~1\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\048C~1\23DB~1\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13222, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x269C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13222:
+
+  13220: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13221:     {
+=>13222: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13223: 
+  13224: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:6:
+
+      4: void drawSky(int R, int G, int B)
+      5: {
+=>    6:     txSetColor (RGB(R, G, B));
+      7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 15 2024 09:13:01, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 15 2024 09:13:18
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13222, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x1E6C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13222:
+
+  13220: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13221:     {
+=>13222: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13223: 
+  13224: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:6:
+
+      4: void drawSky(int R, int G, int B)
+      5: {
+=>    6:     txSetColor (RGB(R, G, B));
+      7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 22 2024 08:26:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 22 2024 08:27:02
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdre0, Thread: 0xF78 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:123:
+
+    121: 
+    122: 
+=>  123:     txTextCursor (false);
+    124:     return 0;
+    125:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 22 2024 08:42:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 22 2024 08:42:39
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdre0, Thread: 0x1E10 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:123:
+
+    121: 
+    122: 
+=>  123:     txTextCursor (false);
+    124:     return 0;
+    125:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 22 2024 08:46:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 22 2024 08:47:09
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdre0, Thread: 0x1020 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:123:
+
+    121: 
+    122: 
+=>  123:     txTextCursor (false);
+    124:     return 0;
+    125:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 22 2024 08:51:21, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 22 2024 08:51:37
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 9223, функция: int {anonymous}::TX::txPause(const char*, ...),
+
+Сообщение: Похоже, программа зависла :(
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdre0, Thread: 0xC20 (Canvas). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int {anonymous}::TX::txPause(const char*, ...) at c:\codeblocks\codeblocks\mingw\include\txlib.h:9223:
+
+   9221: 
+   9222:         if (_TX_CALL (Win32::GhostWindowFromHungWindow, (canvas)))
+=> 9223:             {$ TX_ERROR ("Похоже, программа зависла :("); break; }
+   9224: 
+   9225:         if (canvas && _TX_CALL (Win32::IsHungAppWindow, (canvas)))
+
+# 1 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9100:
+
+   9098: $       if (console && isParentWaitable >= 0)
+   9099:             {
+=> 9100: $           txPause ((_txErrors)?               "\f\n" "[Press F to Pay Respects...]" :
+   9101:                      (!canvas && _txIsTTY (0))? "\f\n" "[Нажмите любую клавишу для завершения]" : "\f");
+   9102: 
+
+# 2 in unsigned int {anonymous}::TX::_txCanvas_ThreadProc(void*) at c:\codeblocks\codeblocks\mingw\include\txlib.h:9852:
+
+   9850: $   if (_txRunning && _txMain)         // Main window is destroyed but main() is still running.
+   9851:         {                              // No chances for good termination, so use exit().
+=> 9852: $       _txCleanup();
+   9853: $       ::exit ((int) msg.wParam);     //-V202 //-V2509 //-V2014
+   9854:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 22 2024 08:54:41, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 22 2024 08:54:59
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\048C~1\23DB~1\TRIMER\bin\Debug\TRIMER.exe,
+
+ВНЕЗАПНО: Неверный или уже закрытый дескриптор.
+
+#1: Исключение EXCEPTION_INVALID_HANDLE (0xC0000008) при выполнении кода по адресу 0xDEF9144A. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x208C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void {anonymous}::TX::_txOnExitProcess(unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h:8958:
+
+   8956:         }
+   8957: 
+=> 8958: $5  _txCleanup();
+   8959: 
+   8960:     if (retcode != 0)
+
+# 1 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:124:
+
+    122: 
+    123: 
+=>  124:     txTextCursor (false);
+    125:     return 0;
+    126:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 22 2024 08:59:13, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 22 2024 08:59:33
+
+Run file:	C:\048C~1\23DB~1\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\048C~1\23DB~1\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\048C~1\23DB~1\TRIMER\bin\Debug\TRIMER.exe,
+
+ВНЕЗАПНО: Неверный или уже закрытый дескриптор.
+
+#1: Исключение EXCEPTION_INVALID_HANDLE (0xC0000008) при выполнении кода по адресу 0xDEF9144A. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x208C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void {anonymous}::TX::_txOnExitProcess(unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h:8958:
+
+   8956:         }
+   8957: 
+=> 8958: $5  _txCleanup();
+   8959: 
+   8960:     if (retcode != 0)
+
+# 1 in int main() at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:124:
+
+    122: 
+    123: 
+=>  124:     txTextCursor (false);
+    125:     return 0;
+    126:         }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 22 2024 08:59:13, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 22 2024 08:59:33
+
+Run file:	C:\048C~1\23DB~1\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\048C~1\23DB~1\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13222, функция: HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x28D0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HPEN__* {anonymous}::TX::txSetColor(COLORREF, double, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13222:
+
+  13220: HPEN txSetColor (COLORREF color, double thickness /*= 1*/, HDC dc /*= txDC()*/)
+  13221:     {
+=>13222: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13223: 
+  13224: $   HPEN pen = Win32::CreatePen ((color == TX_TRANSPARENT? PS_NULL : PS_SOLID), ROUND (thickness), color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:6:
+
+      4: void drawSky(int R, int G, int B)
+      5: {
+=>    6:     txSetColor (RGB(R, G, B));
+      7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 22 2024 09:04:04, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 22 2024 09:04:21
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13274, функция: HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0x291C (Main), GetLastError(): 87 (Параметр задан неверно). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13274:
+
+  13272: HBRUSH txSetFillColor (COLORREF color, HDC dc /*= txDC()*/)
+  13273:     {
+=>13274: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13275: 
+  13276: $   HBRUSH brush = (color == TX_TRANSPARENT)? (HBRUSH) Win32::GetStockObject (HOLLOW_BRUSH) : Win32::CreateSolidBrush (color);
+
+# 1 in void drawSky(int, int, int) at C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\main.cpp:7:
+
+      5: {
+      6:     txSetColor (RGB(R, G, B));
+=>    7:     txSetFillColor(RGB(R, G, B));
+      8:     txRectangle (0, 0, 800, 800);
+      9: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 22 2024 09:05:34, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 22 2024 09:05:51
+
+Run file:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER\bin\Debug\TRIMER.exe
+Directory:	C:\Мищенко Кирилл\МУЛЬТФИЛЬМ\TRIMER
+
+--------------------------------------------------
